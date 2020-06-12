@@ -9,6 +9,8 @@ using WebAPI07Application.Providers;
 using Microsoft.Owin.Security.OAuth;
 */
 
+using System.Web.Http.Cors;
+
 namespace WebAPI10Application
 {
     public static class WebApiConfig
@@ -20,7 +22,9 @@ namespace WebAPI10Application
             //config.SuppressDefaultHostAuthentication();
             //config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
-            config.EnableCors();
+            var cors = new EnableCorsAttribute("*", "*", "*");
+
+            config.EnableCors(cors);
 
             // Web API routes
             config.MapHttpAttributeRoutes();

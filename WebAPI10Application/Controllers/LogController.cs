@@ -12,10 +12,15 @@ using System.Text;
 
 using WebAPI10Application.Models;
 
+using System.Web.Http.Cors;
+
 namespace WebAPI10Application.Controllers
 {
     //[AuthenticationFilter]
     //[Authorize]
+
+    //[EnableCors(origins: "http://localhost", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
 
     [RoutePrefix("api/Log")]
 
