@@ -105,7 +105,7 @@ namespace WebAPI10Application
 
                     //--------------------------------  Insert CMS Log   ----------------
                     command.CommandType = CommandType.Text;
-                    command.CommandText = "insert into Log_CMS_Cloud(Source_IP_Address,Target_IP_Address,User_Email,Login_Result,Dt_Gen) values(@Source_IP_Address,@Target_IP_Address,@User_Email,@Login_Result,GETDATE())";
+                    command.CommandText = "insert into Log_CMS_Cloud(Source_IP_Address,Target_IP_Address,User_Email,Login_Result,Dt_Gen) values(@Source_IP_Address,@Target_IP_Address,@User_Email,@Login_Result,DATEADD(HH,7,GETUTCDATE()))";
                     command.Parameters.Clear();
                     param = null;
 

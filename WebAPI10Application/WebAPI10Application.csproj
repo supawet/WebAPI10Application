@@ -176,6 +176,7 @@
     <Content Include="DBConnection.config" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\bblamlogapi - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\bblamlogapi - Web Deploy1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
